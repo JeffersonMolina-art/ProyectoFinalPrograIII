@@ -1,0 +1,19 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Modificar producto</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Nombre producto</label>
+            <input type="text" class="form-control" id="nombreProducto" [(ngModel)]="productos.name" name="name">
+            <label>Descricion producto</label>
+            <input type="text" class="form-control" id="descripcionProducto" [(ngModel)]="productos.description" name="description">
+            <label>Marca</label>
+            <input type="text" class="form-control" id="marcaProducto" [(ngModel)]="productos.marca" name="marca">
+            <label>Precio</label>
+            <input type="text" class="form-control" id="precioProducto" [(ngModel)]="productos.precio" name="precio">
+            <label>Categoria</label>
+            <input type="text" class="form-control" id="categoriaProducto" [(ngModel)]="productos.category" name="category">
+        </div>
+        <button class="btn btn-success">Modificar</button>
+    </form>
+</div>
+

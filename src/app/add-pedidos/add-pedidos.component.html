@@ -1,0 +1,18 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro pedidos</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Producto Pedido</label>
+            <input type="text" class="form-control" id="nombrePedido" [(ngModel)]="pedidos.name_Pedido" name="name_Pedido">
+            <label>Descricion pedido</label>
+            <input type="text" class="form-control" id="descripcionPedido" [(ngModel)]="pedidos.description_Pedido" name="description_Pedido">
+            <label>Marca</label>
+            <input type="text" class="form-control" id="marcaPedido" [(ngModel)]="pedidos.marca_Pedido" name="marca_Pedido">
+            <label>Precio</label>
+            <input type="text" class="form-control" id="precioPedido" [(ngModel)]="pedidos.precio_Pedido" name="precio_Pedido">
+            <label>Categoria</label>
+            <input type="text" class="form-control" id="categoriaPedido" [(ngModel)]="pedidos.categoria" name="categoria">
+        </div>
+        <button class="btn btn-success">Añadir</button>
+    </form>
+</div>

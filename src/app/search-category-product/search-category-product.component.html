@@ -1,0 +1,24 @@
+<h2 class="text-center">Buscar por producto por categoria</h2>
+<input type="text" [(ngModel)]="searchResults" placeholder="Buscar" />
+<button (click)="searchName()" class="btn btn-success">Buscar</button>
+<button (click)="irListarProductos()" class="btn btn-success">Lista productos</button>
+<table class="table table-striped">
+  <thead class="table-primary">
+      <tr>
+          <th>Nombre</th>
+          <th>Descrición</th>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Categoria</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor= "let productos of resultados">
+          <td>{{productos.name}}</td>
+          <td>{{productos.description}}</td>
+          <td>{{productos.marca}}</td>
+          <td>{{productos.precio}}</td>
+          <td>{{productos.category}}</td>
+      </tr>
+  </tbody>
+</table>

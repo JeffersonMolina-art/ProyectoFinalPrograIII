@@ -1,0 +1,17 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro proveedores</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Nombre Proveedor</label>
+            <input type="text" class="form-control" id="nombrePedido" [(ngModel)]="proveedores.nameProveedores" name="nameProveedores">
+            <label>Empresa</label>
+            <input type="text" class="form-control" id="empresa" [(ngModel)]="proveedores.empresa" name="empresa">
+            <label>Mail</label>
+            <input type="text" class="form-control" id="mail" [(ngModel)]="proveedores.mail" name="mail">
+            <label>Telefono</label>
+            <input type="text" class="form-control" id="phone" [(ngModel)]="proveedores.phone" name="phone">
+        </div>
+        <button class="btn btn-success">Añadir</button>
+    </form>
+</div>
+

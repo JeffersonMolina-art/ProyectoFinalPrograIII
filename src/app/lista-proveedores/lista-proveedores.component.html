@@ -1,0 +1,29 @@
+<h2 class="text-center">Lista de proveedores Variedades del Cid</h2>
+<p></p>
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-success"(click)="irAddProveedores()">Añadir Proveedores</button>
+  </div>
+<p></p>
+<table class="table table-striped">
+    <thead class="table-primary">
+        <tr>
+            <th>Nombre</th>
+            <th>Empresa</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let proveedor of proveedores">
+            <td>{{proveedor.nameProveedores}}</td>
+            <td>{{proveedor.empresa}}</td>
+            <td>{{proveedor.mail}}</td>
+            <td>{{proveedor.phone}}</td>
+            <td>
+            <button (click)="actualizarProveedores(proveedor.idProveedores)" class="btn btn-info">Modificar</button>
+            <button (click)="eliminarProveedores(proveedor.idProveedores)" class="btn btn-danger" style="margin-left: 10px;">X</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

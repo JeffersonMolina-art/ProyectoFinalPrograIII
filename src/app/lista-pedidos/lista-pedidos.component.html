@@ -1,0 +1,34 @@
+<p></p>
+<h2 class="text-center text-secundary">Lista de pedidos Variedades del Cid</h2>
+<p></p>
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-success" (click)="irAddPedido()">Añadir Pedidos</button>
+  </div>
+<p></p>
+<table  class="table table-striped">
+    <thead class="table-primary">
+        <tr>
+            <th>Nombre</th>
+            <th>Descrición</th>
+            <th>Marca</th>
+            <th>Precio</th>
+            <th>Categoria</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let pedidos of pedidos">
+            <td>{{pedidos.name_Pedido}}</td>
+            <td>{{pedidos.description_Pedido}}</td>
+            <td>{{pedidos.marca_Pedido}}</td>
+            <td>{{pedidos.precio_Pedido}}</td>
+            <td>{{pedidos.categoria}}</td>
+            <td>
+                <button (click)="actualizarPedido(pedidos.id_Peido)" class="btn btn-info">Modificar</button>
+                <button (click)="eliminarPedido(pedidos.id_Peido)" class="btn btn-danger" style="margin-left: 10px;">X</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
